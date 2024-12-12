@@ -20,3 +20,4 @@ Feature: Test for target sign in
     Given Open target main page
     When click sign in
     Then verify sign in form is open
+

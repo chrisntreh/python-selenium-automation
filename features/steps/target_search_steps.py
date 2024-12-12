@@ -41,7 +41,7 @@ from time import sleep
 
 @given('Open target main page')
 def open_main(context):
- context.driver.get('https://www.target.com/')
+    context.driver.get('https://www.target.com/')
 
 
 @when('click sign in')
