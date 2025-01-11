@@ -42,11 +42,13 @@ from time import sleep
 @given('Open target main page')
 def open_main(context):
     context.driver.get('https://www.target.com/')
+    context.app.main_page.open_main_page()
 
 
 @when('click sign in')
 def click_sign_in(context):
      context.driver.find_element(By.XPATH, "//span[@class='sc-58ad44c0-3 kkWqdY h-margin-r-x3']").click()
+     context.app.header.search_product()
 
 
 @then('verify sign in form is open')
