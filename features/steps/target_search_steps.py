@@ -41,19 +41,20 @@ from time import sleep
 
 @given('Open target main page')
 def open_main(context):
-    context.driver.get('https://www.target.com/')
+    #context.driver.get('https://www.target.com/')
     context.app.main_page.open_main_page()
 
 
 @when('click sign in')
 def click_sign_in(context):
-     context.driver.find_element(By.XPATH, "//span[@class='sc-58ad44c0-3 kkWqdY h-margin-r-x3']").click()
-     context.app.header.search_product()
+     #context.driver.find_element(By.XPATH, "//span[@class='sc-58ad44c0-3 kkWqdY h-margin-r-x3']").click()
+     context.app.header.click_signin_btn()
 
 
 @then('verify sign in form is open')
 def verify_sign_in_form(context):
-    expected_results = 'Sign in to target account'
-    actual_results=context.driver.find_element(By.XPATH, "//button[@data-test='accountNav-signIn']").click()
-    assert expected_results == actual_results, f'Expected {expected_results}, but got {actual_results}'
-    sleep(8)
+    # expected_results = 'Sign in'
+    # actual_results=context.driver.find_element(By.XPATH, "//button[@data-test='accountNav-signIn']").text
+    # assert expected_results == actual_results, f'Expected {expected_results}, but got {actual_results}'
+    # sleep(8)
+    context.app.signin_page.verify_signin_form_opened()

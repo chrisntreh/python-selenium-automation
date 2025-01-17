@@ -1,7 +1,7 @@
 # Created by chris at 12/10/2024
 Feature: open the Target page
   Scenario: User can access Target’s product into the cart
-    Given Open target page
+    Given Open target main page
     And Search for tea
     When Add to cart
     And access cart
