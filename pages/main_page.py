@@ -8,3 +8,7 @@ class MainPage(BasePage):
     def open_main_page(self):
         self.open_url('https://www.target.com/')
 
+    def switch_to_window_by_id(self, window_id):
+        self.driver.switch_to.window(window_id)
+        print('Current window ', self.driver.current_window_handle)
+
